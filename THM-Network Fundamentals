@@ -1,7 +1,7 @@
 List of Keywords
 1) Network
 2) Internet
-3) ARPANET project
+3) Advanced Research Projects Agency Network (ARPANET)
 4) World Wide Web (WWW)
 5) Private Network
 6) Public Network
@@ -32,3 +32,12 @@ List of Keywords
 31) DHCP Offer
 32) DHCP Request
 33) DHCP ACK
+
+*Network*
+-> a collection of connected devices that facilitate communication and data transimission.
+
+*Internet*
+-> global network of interconnected computer networks (basically the same definition of 'network' but on a larger scale.
+
+*Advanced Research Projects Agency Network (ARPANET)*
+-> the first wide-area packet-switched network with distributed control and one of the first computer networks to implement the TCP/IP protocol suite

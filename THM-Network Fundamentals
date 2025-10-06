@@ -43,6 +43,18 @@ List of Keywords
 42) Transimission Control Protocol (TCP)
 43) Graphical User Interface (GUI)
 44) Domain Name System (DNS)
+45) Packet
+46) Frame
+47) IP Headers: Time to Live, Checksum, Source Address, Destination Address
+48) TCP Headers: Source Port, Destination Port, Source IP, Destination IP, Sequence Number, Acknowledgement Number, Checksum, Data, Flag
+49) Three-way Handshake Messages: SYN, SYN/ACK, ACK, DATA, FIN, RST
+50) UDP Headers: TTL, Source Address, Destination Address, Source Port, Destination Port, Data
+51) File Transfer Protocol (FTP) - port 21
+52) Secure Shell (SSH) - port 22
+53) HyperText Transfer Protocol (HTTP) - port 80
+54) HyperText Trasfer Protocol Secure (HTTPS) - port 443
+55) Server Message Block (SMB) - 445
+56) Remote Desktop Protocol (RDP) - 3389
 
 *Network*
 -> a collection of connected devices that facilitate communication and data transimission.

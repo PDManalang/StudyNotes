@@ -37,6 +37,12 @@ List of Keywords
 36) Binary
 37) Ethernet Cable
 38) Network Interface Card (INC)
+39) Open Shortest Path First (OSPF)
+40) Routing Information Protocol (RIP)
+41) User Datagram Protocol (UDP)
+42) Transimission Control Protocol (TCP)
+43) Graphical User Interface (GUI)
+44) Domain Name System (DNS)
 
 *Network*
 -> a collection of connected devices that facilitate communication and data transimission.

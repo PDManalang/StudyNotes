@@ -55,6 +55,13 @@ List of Keywords
 54) HyperText Trasfer Protocol Secure (HTTPS) - port 443
 55) Server Message Block (SMB) - 445
 56) Remote Desktop Protocol (RDP) - 3389
+57) Port Forwarding
+58) Firewall
+59) Snort
+60) Firewall Category: Stateful, Stateless
+61) Virtual Private Network (VPN)
+62) VPN Technology: PPP, PPTP, IPSec
+63) Virtual Local Area Network (VLAN)
 
 *Network*
 -> a collection of connected devices that facilitate communication and data transimission.

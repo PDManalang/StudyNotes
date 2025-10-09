@@ -41,3 +41,63 @@ What happens when you make a DNS Request
 ### 2.1 What is HTTP?
 - **Hypertext Transfer Protocol (HTTP)** used when viewing a website. It is the set of rules used for communicating with web servers for transmitting webpage data (ex. HTML, Images, Videos, etc.)
 - **Hypertext Transfer Protocol Secure (HTTPS)** a `secure` version of HTTP. Data is `encrypted`, not only that it stops people from seeing the data you are receiving and sending, but it also assures that you're talking to the correct web server (not an impersonator).
+
+### 2.2 Requests and Responses
+**Uniform Resource Locator (URL)** an instruction on how to access Internet resource.
+<img width="1140" height="270" alt="image" src="https://github.com/user-attachments/assets/313fb5a7-0c54-4396-b1bc-2ee64cb0d1d2" />
+
+Features of URL
+- **Scheme:** protocol to use (ex. HTTP, HTTPS, FTP).
+- **User:** user authentication (as required by some websites).
+- **Host:** domain name or ip address of server you wish to access.
+- **Port:** port you're going to connect to, usually `80` for `HTTP` and `443` for `HTTPS` (but can be hosted by any port between 1-65535).
+- **Path:** file name or location of resource you're trying to access.
+- **Query String:** extra bits of information that can be sent from requested path. (ex. `/blog?id=1` would tell blog path that wish to receive blog article with id=1.)
+- **Fragment:** reference to a location on the actual page requested.
+
+### 2.3 HTTP Methods
+- **GET Request** getting information from a web server.
+- **POST Request** submitting data to a web server and potentially create new records.
+- **PUT Request** submitting data to a web server to update information.
+- **DELETE Request** deleting information/data from a web server.
+
+### 2.4 HTTP Status Codes
+**HTTP Status Codes**
+- **100-199 Information Response**
+  - sent to tell the client that their request is accepted and can proceed. These codes are no longer common.
+- **200-299 Success**
+  - sent to tell the client that their request was successful.
+- **300-399 Redirection**
+  - redirect the client request to another resource.
+- **400-499 Client Errors**
+  - inform client that there's an error with their request.
+- **500-599 Server Errors**
+  - reserved errors that are happening on the server-side, usually indicate a `major problem` with the server handling the request.
+
+**Common HTTP Status Codes**
+- **200 OK**
+  - request completed successfully.
+- **201 Created**
+  - resource has been created (ex. a new user or new blog post).
+- **301 Moved Permanently**
+  - redirect the client to a new webpage or tells search engine that the page has moved elsewhere.
+- **302 Found**
+  - similar to `code 301` but can be temporary and may change again in the future.
+- **400 Bad Request**
+  - tells the browser that something is wrong or missing in their request.
+- **401 Not Authorized**
+  - you are not allowed to view this resource until you have authorization.
+- **403 Forbidden**
+  - you do not have the permission to view this resource (whether you're logged in or not).
+- **405 Method Not Allowed**
+  - resource does not allow this method request (ex. you send a `GET` request, but it was expecting a `POST` request instead).
+- **404 Page Not Found**
+  - page/resource you request does not exist.
+- **500 Internal Service Error**
+  - server has encountered some kind of error in your request that it doesn't know how to handle properly.
+- **503 Service Unavailable**
+  - server cannot handle your request as it's either overloaded or down for maintenance.
+
+HTTP Status Code Learning Resource (taught by Cats HAHA) - (https://http.cat/)
+
+

@@ -100,4 +100,24 @@ Features of URL
 
 HTTP Status Code Learning Resource (taught by Cats HAHA) - (https://http.cat/)
 
+### 2.5 Headers
+**Common Request Headers**
+(these headers are sent `from the client (your browser) to the server`)
+- **Host** as some web servers host multiple websites, this can help you tell which one you require.
+- **User-Agent** this is your browser `software and version number`, can help format the website properly for your browser.
+- **Content-Length** tells the webserver `how much data to expect` in the web request.
+- **Accept-Encoding** tells the web server what types of `compression methods` the browser supports.
+- **Cookie** help remember your information.
+
+**Common Response Headers**
+(these headers are `returned back to the client` from the server after a request)
+- **Set-Cookie** information to store which gets sent back to the web server on each request.
+- **Cache-Control** how long to store content of the response in the browser's cache before it requests it again.
+- **Content-Type** tells the client what type of data is being returned.
+- **Content-Encoding** what method has been used to compress the data to make it smaller when sending over the Internet.
+
+### 2.6 Cookies
+- **Cookies** a small piece of data that is stored in your computer. Can be used to remind the computer who you are.
+- **Set-Cookies** header response that you receive once cookies are saved.
+
 

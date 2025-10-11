@@ -120,4 +120,78 @@ HTTP Status Code Learning Resource (taught by Cats HAHA) - (https://http.cat/)
 - **Cookies** a small piece of data that is stored in your computer. Can be used to remind the computer who you are.
 - **Set-Cookies** header response that you receive once cookies are saved.
 
+## 3 How Websites Work
+### 3.1 How Websites Work
+
+**Web Server** a dedicated computer that handles requests.
+
+Major components that makes up a website:
+- **Front-end (Client-Side)** the way a browser renders a website.
+- **Back-end (Server-Side)** a server that processes request and returns a response.
+
+### 3.2 HTML
+Websites are primarily created using:
+- **HTML** build websites and define their structure.
+- **CSS** make websites look pretty (styling options).
+- **JavaScript** implement features to make pages interactive.
+
+**HyperText Markup Language (HTML)** is the language websites are written in. **Elements (also known as `tags`)** are the building blocks of HTML pages and tells the browser how to display content.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>Example Heading</h1>
+    <p>Example Paragraph..</p>
+  </body>
+</html>
+```
+The HTML structure (as shown above) has the following components:
+- The `<!DOCTYPE html>` defines that the page is a HTML5 document. Helps `standardized` for a browser to use HTML5 to interpret the page.
+- The `<html>` the `root` element of HTML page - all other elements come after this.
+- The `<head>` contains information about the page (such as the title page).
+- The `<body>` defines the content shown in the browser.
+- The `<h1>` defines a large heading.
+- The `<p>` defines a paragraph.
+- and many more elements (ex. `<img>,<button>`)
+
+### 3.3 JavaScript
+**JavaScript (JS)** used to control the functionality of web pages (dynamic updates on the page in real-time).
+
+### 3.4 Sensitive Data Exposure
+- occurs when a website doesn't properly protect (or remove) sensitive clear-text information to the end-user (usually found in the front-end source code).
+- can potentially leveraged to further an attacker's access within different parts of a web application.
+
+### HTML Injection
+- a vulnerability that occurs when `unfiltered user input is displayed on the page`.
+- **Input Sanitisation** filters any `malicious` text that a user inputs into a website.
+
+## 4 Putting it all together
+### 4.1 Putting it all together
+To summarize the process behind-the-scenes when requesting a webpage in your browser:
+1. Request website in your browser (domain name or IP address)
+2. Find Web Server IP address with DNS
+3. Connect to Web Server
+4. View Website
+
+### 4.2 Other Components
+**Load Balancers**
+- ensure that high traffic websites can handle the load and provide a failover if server becomes unresponsive.
+- will initially receive the request, then forward to one of the multiple servers behind it.
+- perform periodic checks with each server ensuring that they are running correctly, this is called `health check`.
+**Content Delivery Networks (CDN)**
+- excellent resource for cutting down traffic to a busy website.
+- host requests across thousands of servers (works out where the nearest server is physically located).
+**Databases**
+- use by web server to store and recall data.
+**Web Application Firewall (WAF)**
+- is what sits between `web request and web server`.
+- primary purpose is to protect the web server from hacking or denial of service attacks.
+- analysese web request for common attack techniques (if request by real browser or a bot).
+- checks if an excessive amount of web requests are being sent (utilizing `rate limiting`).
+
+
 

@@ -193,5 +193,9 @@ To summarize the process behind-the-scenes when requesting a webpage in your bro
 - analysese web request for common attack techniques (if request by real browser or a bot).
 - checks if an excessive amount of web requests are being sent (utilizing `rate limiting`).
 
+### 4.3 How Web Servers Work
+**Web Server**
+- a software that *listens for incoming connections and utilizes HTTP protocol to deliver web content to clients*.
+- common web server(s): *Apache,Nginx,IIS,and NodeJS*.
 
 

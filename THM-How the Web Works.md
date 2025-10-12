@@ -182,11 +182,14 @@ To summarize the process behind-the-scenes when requesting a webpage in your bro
 - ensure that high traffic websites can handle the load and provide a failover if server becomes unresponsive.
 - will initially receive the request, then forward to one of the multiple servers behind it.
 - perform periodic checks with each server ensuring that they are running correctly, this is called `health check`.
+
 **Content Delivery Networks (CDN)**
 - excellent resource for cutting down traffic to a busy website.
 - host requests across thousands of servers (works out where the nearest server is physically located).
+
 **Databases**
 - use by web server to store and recall data.
+
 **Web Application Firewall (WAF)**
 - is what sits between `web request and web server`.
 - primary purpose is to protect the web server from hacking or denial of service attacks.
@@ -197,5 +200,16 @@ To summarize the process behind-the-scenes when requesting a webpage in your bro
 **Web Server**
 - a software that *listens for incoming connections and utilizes HTTP protocol to deliver web content to clients*.
 - common web server(s): *Apache,Nginx,IIS,and NodeJS*.
+
+**Virtual Hosts**
+- text-based configuration files.
+- allows web servers to host multiple websites with different domain names.
+
+**Static vs Dynamic Content**
+- *Static* a content that never changes.
+- *Dyanmic* on the other hand, is content that could change with different request. Changes made are done in what is called the `Backend` (done behind the scenes). While `Frontend` is what you see in your browser.
+
+**Scripting and Backend Languages**
+- example langauges: PHP, Python, Ruby, NodeJS, Perl, and many more.
 
 

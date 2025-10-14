@@ -6,3 +6,12 @@
 ## 2.3 Introdcution to Flags and Switches
 - `ls` list the content of the working directory (does not include hidden files), but if typed `ls -a (all)` this will include hidden ones.
 - `man` manual page (documentation of Linux system commands and applications).
+
+## 2.4 Filesystem Interaction Continued
+- `touch` create a file
+- `mkdir` create a folder
+- `cp` copy a file or folder
+- `mv` move a file or folder
+- `rm` remove a file
+  - `rm -R` to remove a folder
+- `file` determine type of file

@@ -15,3 +15,19 @@
 - `rm` remove a file
   - `rm -R` to remove a folder
 - `file` determine type of file
+
+## 2.5 Permission 101
+- `ls -lh` list of permissions of all files in the directory
+  - can give overview on what actions are allowed and who has the ability to perform an action -- `Read`,`Write`,`Execute`.
+- `su` switch user, new session drops into previous user's home directory.
+- `su -l` switch user, new session drops into the current user's home directory.
+
+## 2.6 Common Directories
+- `/etc` root directory.
+  - a commonplace location to store files that are used by the operating system.
+- `/var` variable data directory.
+  - stores data that is frequently accessed or written by services or applications running on the system.
+- `/root` home for the `root` user system.
+- `/tmp` temporary directory
+  - stores data that is only needed to be accessed once or twice.
+  - similar to computer memory, content is cleared out once computer is restarted.

@@ -33,3 +33,25 @@
 - `systemd` a process that sits between the OS and the user.
 - `systemct1` command that allows us to interact with the `systemd` process/daemon.
     - options to work with `systemct1`: `start, stop, enable, disable`.
+
+## 3.6 Maintaining Your System: Automation
+- `crontab` a special file with formatting that is recognizd by `cron` process to execute each line-by-line steps.
+    - requires 6 specific values:
+        - `MIN` what minute to execute at
+        - `HOUR` what hour to execute at
+        - `DOM` what day of month to execute at
+        - `MON` what month of the year to execute at
+        - `DOW` what day of week to execute at
+        - `CMD` actual command that will be executed
+    - `(*) asterisk` can be used if you do not wish to provide a value for a specific field.
+    - crontabs can be edited by using the command `crontab -e`.
+
+## 3.7 Maintaining Your System: Package Management
+- `apt` normally used as command to install software unto an Ubuntu system.
+    - it's part of the package management software that also named `apt` - it contains a whole suite of tools to manage packages (install and remove softwares).
+    - `add-apt-repository` command use to add a repository.
+    - `add-apt-repository --remove ppa:PPA_Name/ppa` remove package.
+    - `apt remove [software-name-here]` remove software.
+
+## 3.8 Maintaining Your System: Logs
+- read logs lol.

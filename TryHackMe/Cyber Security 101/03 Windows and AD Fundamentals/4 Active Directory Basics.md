@@ -1,4 +1,5 @@
 # 4 Active Directory Basics
+
 ## 4.2 Windows Domains
 - **windows domain** is a group of users and computers under the administration of a given business.
 - this is to centralize the administraions common components of a Windows computer network in a single repository called `Active Directory`.
@@ -44,3 +45,13 @@
 - `OUs` are handy for `applying policies` to users and machines. A user can only be a member of one OU at a time.
 - `Security Groups` used to `grant permissions over resources`. A user can be a part of many security groups (be able to have access to multiple resourcess).
 
+## 4.4 Managing Users in AD
+
+### Deleting extra OUs and Users
+- by default, OUs are protected against `accidental deletion`.
+- find `Advanced Features` in View menu, then under `Object tab` disable the object protection.
+
+## Delegation
+- this process allows you to give specific users some control over the OUs.
+- grants selected users to have specific privilege without needing an Domain Admin to step in (most common in `IT Support`).
+- to delegate control over an OU, right-click it and select `Delegate Control`.

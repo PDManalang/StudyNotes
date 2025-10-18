@@ -55,3 +55,9 @@
 - this process allows you to give specific users some control over the OUs.
 - grants selected users to have specific privilege without needing an Domain Admin to step in (most common in `IT Support`).
 - to delegate control over an OU, right-click it and select `Delegate Control`.
+
+## 4.5 Managing Computers in AD
+- generally, devices are divided into categories:
+    - **Workstations** usually used to do work or normal browsing activities. No privileged user signed into.
+    - **Servers** usually used to provide services to users or other servers.
+    - **Domain Controllers** allow to manage the `Active Directory`. Often the most sensitive devices within the network (hashed passwords for user accounts within the environment).

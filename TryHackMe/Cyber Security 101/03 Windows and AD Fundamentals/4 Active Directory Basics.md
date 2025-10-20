@@ -66,4 +66,23 @@
 - `Group Policy Objects (GPO)` a collection of settings that can be applied to OUs.
     - can contain policies aimed at either users or computers (set baseline on specific machines and identities).
 - `SYSVOL` network share used to distribute GPOs (stored in DC)
-    - can force any computer to sync GPOs immediately, with command `gupdate /force`
+    - can force any computer to sync GPOs immediately, with command `gupdate /force`.
+
+## 4.7 Authentication Methods
+- when using Windows domains, all credentials are stored in the Domain Controllers (DC).
+- Protocols used for network authentication in Windows domains:
+    - **Kerberos** used by any recent version of Windows (default protocol).
+    - **NetNTLM** legacy protocol kept for compatibility purposes.
+
+### Kerberos Authentication Process
+1. User sends `username and timestamp` derived from their password to the `Key Distribution Center (KDC)`.
+2. KDC will send back a `Ticket Granting Ticket (TGT)` that will allow user to request additional tickets (to access specific services).
+3. KDC wil also provide a `Session Key` that will also be needed in order to request additional tickets.
+4. When user wants to access specific services, they will use their `TGT` to request for `Ticket Granting Service (TGS)`.
+5. User will send again their `username and timestamp, along with their TGT and Service Principal Name (SPN)` --> SPN indicates the service and server name we intend to access.
+6. KDC will send back the `TGS along with a Service Session Key`, TGS is encrypted using a key derived from the `Service Owner Hash`. --> it is the user or machine that the service runs under.
+
+## 4.8 Trees, Forests, and Trusts
+- `Tree` intergration of multiple domains (can work independently) - same namespace
+- `Forest` different domain under the same network - different namespace
+- `Trust` at some point one domain (from different namespace) might need to access resources from the other domain (from different namespace)

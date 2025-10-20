@@ -61,3 +61,9 @@
     - **Workstations** usually used to do work or normal browsing activities. No privileged user signed into.
     - **Servers** usually used to provide services to users or other servers.
     - **Domain Controllers** allow to manage the `Active Directory`. Often the most sensitive devices within the network (hashed passwords for user accounts within the environment).
+
+## 4.6 Group Policies
+- `Group Policy Objects (GPO)` a collection of settings that can be applied to OUs.
+    - can contain policies aimed at either users or computers (set baseline on specific machines and identities).
+- `SYSVOL` network share used to distribute GPOs (stored in DC)
+    - can force any computer to sync GPOs immediately, with command `gupdate /force`

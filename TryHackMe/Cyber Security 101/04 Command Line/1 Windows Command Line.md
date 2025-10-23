@@ -40,3 +40,9 @@
 - `move` does the same thing as `copy` (but moves the entire thing, not a duplicate).
 - `del or erase` delete a file.
 - `*` wildcard, example use `copy *.md C:\Markdown` which will copy all files with extension .md to directory C:\Markdown.
+
+## 1.5 Task and Process Management
+- `tasklist` list the processes running.
+- `tasklist /?` help page for tasklist.
+- `tasklist /FI "imagename eq sshd.exe"` meaning to *Filter image name equal to sshd.exe* (can be other image name).
+- `taskkill /PID target_pid`.

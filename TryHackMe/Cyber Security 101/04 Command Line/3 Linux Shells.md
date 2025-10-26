@@ -21,3 +21,14 @@
     - advanced tab completion and is also capable of writing scripts.
     - auto spelling correction
     - extensive customization
+
+## 3.4 Shell Scripting and Components
+- to execute scripts in one-go, can create a file with a `.sh` extension.
+- every script should start with a shebang `#!`
+- `chmod +x script_name.sh` execute permission to script.
+- `./script_name.sh` script execution
+- Variables:
+    - `echo` display string on the screen.
+    - `read` used to take input from the user.
+- Loops:
+    - `for i in {1..10}; do echo $i done`, sample loop command.

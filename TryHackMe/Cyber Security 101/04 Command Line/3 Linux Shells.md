@@ -32,3 +32,6 @@
     - `read` used to take input from the user.
 - Loops:
     - `for i in {1..10}; do echo $i done`, sample loop command.
+- Conditional Statements:
+    - `if ["$name" = "Stewart"]; then echo "Welcome Stewart! Here is the secret: THM_Script" echo "Sorry! You are not authorized for access." fi`, sample conditional command.
+- Comments, written with `#` followed by a `space and sentence you need to write.`

@@ -19,3 +19,30 @@
     3. **Transport Layer**, layer 4 of OSI Model.
     4. **Application Layer**, grouped version of layers 5,6,7 of OSI Model.
 - in modern textbooks, they also include `Layer 1: Physical Layer`.
+
+## 1.4 IP Addresses and Subnets
+- IP addresses are composed of `four octets, 32-bits`. Being 8 bits, an octet allows us to represent a decimal number between `0 and 255`.
+- `0` is reserved for `network address`, while `255` is reserved for `broadcast address`.
+
+### Looking up your Network Configuration
+- line command, `ipconfig` for Windows.
+- line command, `ifconfig`, `ip address show` or `ip a s` for Linux / UNIX-based systems.
+
+### Private Addresses
+- `RFC 1918` defines the following ranges of private IP addresses:
+    - `10.0.0.0` - `10.255.255.255` (`10/8`)
+    - `172.16.0.0` - `172.31.255.255` (`172.16/12`)
+    - `192.168.0.0` - `192.168.255.255` (`192.168/16`)
+
+## 1.5 UPD and TCP
+- protocols that enable processes on networked hosts to communicate with each other.
+- valid port numbers ranges between `1 and 65535`.
+- `User Datagram Protocol (UDP)` simple connectionless protocol that operates at the transport layer (layer 4).
+    - does not need to `establish a connection`.
+    - does not provide a mechanism to know that the packet has been delivered.
+- `Transmission Control Protocol (TCP)` a connection-oriented protocol, also operates at the transport layer (layer 4).
+    - requires establishment of a TCP connection before any data can be sent.
+    - connection is established using the `three-way-handshake`.
+        - SYN, client initiate connection to server.
+        - SYN-ACK, server responds to packet.
+        - ACK, client sends acknowledgement on receiving the SYN-ACK packet.

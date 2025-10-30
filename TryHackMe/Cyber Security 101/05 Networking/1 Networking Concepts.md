@@ -54,3 +54,8 @@
     - **Transport Protocol Segment or Datagram** the transport layer, `TCP or UDP`, adds the proper header information and creates the `TCP segment or UDP datagram`. This segment is sent to the layer below it, the network layer.
     - **Network Packet** i.e Internet layer, adds the IP header to the received TCP segment or UDP datagram. Then, this `IP packet` is sent to the layer below it, the data link layer.
     - **Data Link Frame** the Ethernet or WiFi receives the IP packet and adds the proper header and trailer, creating a `frame`.
+
+## 1.7 Telnet
+- `Teletype Network (Telnet)` a network protocol for remote terminal connection.
+- Telnet client allows you `to connect and communicate with a remote system and issue text commands`.
+- Telnet can be used `to connect to any server listening on a TCP port number`.

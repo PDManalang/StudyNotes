@@ -46,3 +46,11 @@
         - SYN, client initiate connection to server.
         - SYN-ACK, server responds to packet.
         - ACK, client sends acknowledgement on receiving the SYN-ACK packet.
+
+## 1.6 Encapsulation
+- `encapsulation` is the process of every layer adding a header (and sometimes a trailer) to the received unit of data and sending the `encapsulated` unit to the layer below.
+- it is an essential concept as it allows each layer to focus on its intended function. following the four steps:
+    - **Application Data** formats the data and send according to the application protocol used, using the layer below it, the transport layer.
+    - **Transport Protocol Segment or Datagram** the transport layer, `TCP or UDP`, adds the proper header information and creates the `TCP segment or UDP datagram`. This segment is sent to the layer below it, the network layer.
+    - **Network Packet** i.e Internet layer, adds the IP header to the received TCP segment or UDP datagram. Then, this `IP packet` is sent to the layer below it, the data link layer.
+    - **Data Link Frame** the Ethernet or WiFi receives the IP packet and adds the proper header and trailer, creating a `frame`.

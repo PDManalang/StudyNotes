@@ -30,3 +30,40 @@
     - `RETR` (retrieve) used to download a file from FTP server to a client.
     - `STOR` (store) used to upload a file from client to FTP server.
 - FTP listens to TCP `port 21` by default; data transfer is conducted via another connection from the client to the server.
+
+## 3.6 SMTP: Sending Email
+- `Simple Mail Transfer Protocol (SMTP)`, defines how mail client talks with a mail server and how a mail server talks with another.
+- commands used by mail client when it transfers an email to SMTP server:
+    - `HELO or EHLO` initiates SMTP session
+    - `MAIL FROM` specifies the sender's email address
+    - `RCPT TO` specifies the recipient's email address
+    - `DATA` indicates that client will begin sending the content of the email message
+    - `.` sent on a line by itself to indicate the end of the message
+- SMTP listens to TCP `port 25` by default.
+
+## 3.7 POP3: Receiving Email
+- `Post Office Protocol version 3 (POP3)`, designed to allow the client to communicate with a mail server and retrieve email messages.
+- common POP3 commands:
+    - `USER <username>` identifies the user
+    - `PASS <password>` provide user's password
+    - `STAT` request the number of messages and total size
+    - `LIST` list all messages and their sizes
+    - `RETR <message_number>` retrieves specified message
+    - `DELE <message_number>` marks a message for deletion
+    - `QUIT` ends the POP3 session applying changes, such as deletion
+- POP3 server listens to TCP `port 110` by default.
+
+## 3.8 IMAP: Synchronizing Email
+- `Internet Message Access Protocol (IMAP)`, allows synchronizing read, moved, and deleted messages.
+- is quite convinient when you check your email via multiple clients.
+- commands for IMAP protocol:
+    - `LOGIN <username> <password>` authenticates the user
+    - `SELECT <mailbox>` selects the mailbox folder to work with
+    - `FETCH <mail_number> <data_item_name>` as an example `fetch 3 body[]` to fetch message number 3, header and body
+    - `MOVE <sequence_set> <mailbox>` moves specified messages to another mailbox
+    - `COPY <sequence_set> <data_item_name>` copies specified messages to another mailbox
+    - `LOGOUT` logs out
+- IMAP servcer listens to TCP `port 143` by default.
+
+## 3.9 Conclusion
+![Port and Protocol Numbers](image-1.png)

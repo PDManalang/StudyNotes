@@ -66,4 +66,4 @@
 - IMAP servcer listens to TCP `port 143` by default.
 
 ## 3.9 Conclusion
-![Port and Protocol Numbers](image-1.png)
+![Port and Protocol Numbers](PortandProtocol.png)

@@ -27,3 +27,19 @@
 
 ### Secure Version (TLS)
 ![TLS Ports](TLS-Ports.png)
+
+## 4.5 SSH
+- `Secure Shell (SSH)` protocol more secure version of telnet.
+- `OpenSSH`, an open-source implementation of SSH. Benefits:
+    - **secure authentication**, besides password authentication, it also supports public key and two-factor auth.
+    - **confidentiality**, end-to-end encryption - protection from eavesdropping.
+    - **integrity**, cryptography protects the integrity of the traffic.
+    - **tunneling**, create secure tunnel to other protocols (much like a VPN connection).
+    - **X11 forwarding**, if you connect to a Unix-like system with a GUI, SSH allows you to use graphical application over the network.
+- SSH listens to `port 22`.
+
+## 4.6 SFTP and FTPS
+- `SSH File Transfer Protocol (SFTP)`
+
+## 4.7 VPN
+- `Virtual Private Network (VPN)`, connect remotely to the main branch.

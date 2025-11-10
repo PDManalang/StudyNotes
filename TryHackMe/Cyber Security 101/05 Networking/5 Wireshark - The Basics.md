@@ -9,3 +9,6 @@
     - detecting security anomalies, such as rogue hosts, abnormal port usage, and suspicious traffic.
     - investigating and learning protocol details, such as response codes and payload data.
 - Note: Wireshark is not an `Intrusion Detection System (IDS)`. It only discover and investigate packets in-depth.
+
+## 5.3 Packet Dissection
+- also known as `protocol dissection`, which investigates packet details by decoding available protocols and fields.

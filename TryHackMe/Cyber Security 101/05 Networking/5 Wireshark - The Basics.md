@@ -12,3 +12,6 @@
 
 ## 5.3 Packet Dissection
 - also known as `protocol dissection`, which investigates packet details by decoding available protocols and fields.
+
+## 5.4 Packet Navigation
+- [Wireshark Documentation](https://www.wireshark.org/docs/)

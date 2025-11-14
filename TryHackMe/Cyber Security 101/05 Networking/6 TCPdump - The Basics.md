@@ -37,3 +37,29 @@
 - `tcpdump -i eth0 -c 50 -v` captures and displays 50 packets by listening on `eth0` (wired ethernet), and displays them verbosely.
 - `tcpdump -i wlo1 -w data.pcap` captures packets by listening on port `wlo1` (WiFi interface) and writes the packets to `data.pcap`. It will continue to capture till user interrupts.
 - `tcpdump -i any -nn` captures all packets on all interfaces and displays then without domain name and protocol resolution.
+
+## 6.3 Filtering Expressions
+
+### Filter by Host
+- `host IP or host HOSTNAME` can be used if you're only interested in IP packets exchanged with a specific network or server.
+- `src host IP or src host HOSTNAME` can be used if you want to limit the packets from a particular source.
+- `dst host IP or dst host HOSTNMAE` can also be done for particular destination.
+
+### Filter by Port
+- `port PORT_NUMBER` can be used if you want to limit captured packets on a specified port.
+- `src port PORT_NUMBER` or `dst port PORT_NUMBER` can also be used to limit the source and destination port.
+
+### Filter by Protocol
+- protocol examples that can be used in filtering, `ip`, `ip6`, `udp`, `tcp`, and `icmp`
+
+### Logical Operators
+- `and`, capture packets if both conditions are true. example `tcpdump host 1.1.1.1 and tcp`.
+- `or`, capture packets if either one of conditions is true. example `tcpdump udp or icmp`.
+- `not`, capture packets when the condition is not true. example `tcpdump not tcp` -> capture all packets except TCP segments.
+
+### Examples
+- `tcpdump -i any tcp port 22` listen on all interfaces and capture tcp packets to or from port 22 (SSH traffic).
+- `tcpdump -i wlo1 udp port 123` listen on WiFi network and filter udp traffic to port 123 (Network Time Protocol, NTP).
+- `tcpdump -i eth0 host example.com and tcp port 443 -w https.pcap` listen to eth0 and filter traffic exchanged with example.com that uses tcp port 443 (HTTPS traffic related to example.com).
+- `tcpdump -r traffic.pcap dst host 1.1.1.1 and arp` to get ip address host that's asking for MAC address of IP 1.1.1.1 (ARP protocol handles MAC address).
+- `tcpdum -r traffic.pcap port 53 -c 5` to get the hostname of the first DNS query (port 53 is used by default).

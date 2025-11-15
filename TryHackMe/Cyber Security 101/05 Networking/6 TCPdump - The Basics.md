@@ -63,3 +63,36 @@
 - `tcpdump -i eth0 host example.com and tcp port 443 -w https.pcap` listen to eth0 and filter traffic exchanged with example.com that uses tcp port 443 (HTTPS traffic related to example.com).
 - `tcpdump -r traffic.pcap dst host 1.1.1.1 and arp` to get ip address host that's asking for MAC address of IP 1.1.1.1 (ARP protocol handles MAC address).
 - `tcpdum -r traffic.pcap port 53 -c 5` to get the hostname of the first DNS query (port 53 is used by default).
+
+## 6.4 Advanced Filtering
+- `greater LENGTH` filter packets that have a length greater or equal to the specified length.
+- `less LENGTH` filter packets that have a length less or equal to the specified length.
+- `man pcap-filter` manual page (as reference).
+
+### Binary Operations
+- `& (AND)` takes two bits and returns 0 unless both inputs are 1.
+- `| (OR)` take two bits and returns 1 unless both inputs are 0.
+- `! (NOT)` takes one bit and inverts it; an input of 1 gives 0, and an input of 0 gives 1.
+
+### Header Bytes
+- purpose is to be able to filter packets based on the contents of a header byte.
+- `proto [expr:size]` refer to the contents of any byte in the header.
+    - `proto` refers to protocol, such as `arp`, `ether`, `icmp`, `ip`, `ip6`, `tcp`, and `udp`.
+    - `expr` indicates byte offset, where 0 refers to first byte.
+    - `size` indicate number of bytes that interest us, can be one, two, or four (optional and is one by default).
+
+### Examples
+- `ether[0] & 1 != 0` takes that first byte in the Ethernet header and decimal number 1 and applies the `& (AND)`. It will return true if the result is not equal to the number 0. Purpose of the filter is to show packets sent to a multicast address. A multicast Ethernet address is a particular address that identifies a group of devices intended to receive the same data.
+- `ip[0] & 0xf != 5` takes the first byte in the IP header and compares it with hexadecimal number F. It will return true if result is not equal to decimal number 5. Purpose is to catch all IP packets with options.
+
+### TCP Flags
+- `tcp[tcpflags]` to refer to the TCP flags field. availabe to compare with:
+    - `tcp-syn` TCP Synchronize
+    - `tcp-ack` TCP Acknowledge
+    - `tcp-fin` TCP Finish
+    - `tcp-rst` TCP Reset
+    - `tcp-push` TCP Push
+- based on above, we can write:
+    - `tcpdump "tcp[tcpflags] == tcp-syn"` to capture TCP packets with only SYN flag set, while all other flags are unset.
+    - `tcpdump "tcp[tcpflags] & tcp-syn != 0"` to capture TCP packets with at least the SYN flag set.
+    - `tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"` to capture TCP packets with at least the SYN or ACK flags set.

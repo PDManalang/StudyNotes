@@ -96,3 +96,5 @@
     - `tcpdump "tcp[tcpflags] == tcp-syn"` to capture TCP packets with only SYN flag set, while all other flags are unset.
     - `tcpdump "tcp[tcpflags] & tcp-syn != 0"` to capture TCP packets with at least the SYN flag set.
     - `tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"` to capture TCP packets with at least the SYN or ACK flags set.
+
+## 6.5 Displaying Packets

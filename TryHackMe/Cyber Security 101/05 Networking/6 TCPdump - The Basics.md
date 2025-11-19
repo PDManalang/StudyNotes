@@ -98,3 +98,9 @@
     - `tcpdump "tcp[tcpflags] & (tcp-syn|tcp-ack) != 0"` to capture TCP packets with at least the SYN or ACK flags set.
 
 ## 6.5 Displaying Packets
+- options to customize how the packets are printed and displayed:
+    - `-q`, quick output; brief packet information
+    - `-e`, print link-level header
+    - `-A`, show packet data in ASCII
+    - `-xx`, show packet data in hexadecimal format, referred to as HEX
+    - `-X`, show packet headers and data in HEX and ASCII

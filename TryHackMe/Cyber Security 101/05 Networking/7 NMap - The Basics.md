@@ -6,3 +6,10 @@
     - IP Subnet `/`, if you want to scan a subnet it can be expressed as `192.168.0.1/24` - this would be equivalent to 192.168.0.0-255
     - Hostname, can also be specified for example `example.thm`
 - NMap offers `-sn` option to discover online hosts on a network (much broad than `ping`)
+- Nmap discovers live hosts such as:
+    - `-PS[portlist]`
+    - `-PA[portlist]`
+    - `-PU[portlist]`
+- Scan list `-sL`, list the targets to scan without actually scanning them
+
+## 7.3 Port Scanning: Who is Listening

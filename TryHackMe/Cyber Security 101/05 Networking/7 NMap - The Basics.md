@@ -39,3 +39,14 @@
         - `-p-25` scann all ports between 1 and 25
         - `-p-` scan all ports and is equivalent to `-p1-65535`
         - `p1-1023` scan for well-known ports
+
+## 7.4 Version Detection: Extract More Information
+### OS Detection
+- enable OS Detection by adding the `-O` option - triggers Nmap to rely on various indicators to make an educated guess about the target OS.
+### Service and Version Detection
+- `-sV` enables version detection - convenient for gathering more information.
+- `-A` option enables OS detection, version scanning, traceroute, and among other things.
+### Forcing the Scan
+- `-Pn` scan hosts that appear to be down
+
+##

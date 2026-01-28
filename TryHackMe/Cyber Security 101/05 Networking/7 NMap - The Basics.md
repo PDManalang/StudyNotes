@@ -24,7 +24,7 @@
 - If TCP port is open and Nmap connects, Nmap will tear down the established connection.
 #### SYN Scan (Stealth)
 - SYN scan can only execute the first step: send a TCP SYN packet.
-- advantage is that it lead to few logs as the connection is never established, thus considered a `realtively stealth scan`.
+- advantage is that it lead to few logs as the connection is never established, thus considered a `relatively stealth scan`.
 - can be executed using `-sS` flag.
 ### Scanning UDP Ports
 - UDP does not require establishing a connection and tearing it down afterwards
@@ -49,4 +49,30 @@
 ### Forcing the Scan
 - `-Pn` scan hosts that appear to be down
 
-##
+## 7.5 Timing: How Fast is Fast
+- Nmap provides an option to control the scan speed and timing.
+- `-T0` or `-T paranoid`
+- Templates
+    - T0 (paranoid), 9.8 hours duration
+    - T1 (sneaky), 27.53 minutes
+    - T2 (polite), 40.56 seconds
+    - T3 (normal), 0.15 seconds
+    - T4 (aggressive), 0.13 seconds
+    - T5 (insane)
+- another helpful option is the `number of parallel service probes`, can be used to set a min and max on the number of TCP and UDP port probes active simultaneously for a host group. By default nmap automatically control the number of parallel probes.
+    - can use `--min-parallelism <numprobes>` and `--max-parallelism <numprobes>` to control the number of parallel probes.
+- similar helpful option is the `--min-rate <number>` and `--max-rate <number>` to control the min and max rates at which nmap sends packets.
+- lastly is the `--host-timeout <time>` specifies the max amount of time wait for a target host.
+
+## 7.6 Output: Controlling What You See
+- **task focus:** show additional info while scan takes place and choosing a file format to save the scan report
+### Verbosity and Debugging
+- add `-v` for real-time information about the scan progress
+- other verbosity level `-vv or -v2` and `-vvvv or -v4`
+- can also add `-d` for debugging-level output, max level is `-d9` (just make sure you're ready for thousands of information and debugging lines)
+### Saving Scan Report
+- Nmap gives various format: `normal output, XML output, grepable output`
+    - `-oN <filename>`, normal output
+    - `-oX <filename>`, XML output
+    - `-oG <filename>`, grep-able output (grep and awk)
+    - `-oA <filename>`, output all major formats

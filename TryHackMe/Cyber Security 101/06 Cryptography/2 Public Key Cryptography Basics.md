@@ -29,3 +29,8 @@ To cover asymmetric cryptosystems and applications that use them:
     - `n and d` is the private key
     - `m` represents the original message (plaintext)
     - `c` represents the encrypted message (ciphertext)
+
+## 2.4 Diffie-Hellman Key Exchange
+- `Key Exchange` aims to establish a shared secret between two parties
+- allows the two parties to establish a shared secret over `insecure communication channel` without requiring pre-existing shared secret without an observer to get this key
+- a shared key that they can use for symmetric encryption in subsequent communications
